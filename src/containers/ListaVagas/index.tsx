@@ -3,7 +3,7 @@ import FormVagas from '../../components/FormVagas'
 import Vaga from '../../components/Vaga'
 
 type Vaga = {
-  id: string
+  id: number
   titulo: string
   localizacao: string
   nivel: string

@@ -8,24 +8,19 @@ type Props = {
 const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('')
 
-  const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    aoPesquisar(termo.toLowerCase())
-  }
-
   const aoMudarInput = (e: ChangeEvent<HTMLInputElement>) => {
     setTermo(e.target.value)
   }
 
+  const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    aoPesquisar(termo.toLowerCase()) // envia o termo para o componente pai
+  }
+
   return (
-    <Formulario onSubmit={aoEnviarForm}>
-      <Campo
-        placeholder="Front-end, fullstack, node, design"
-        onChange={aoMudarInput}
-        type="search"
-        value={termo}
-      />
-      <Botao type="submit">Pesquisar</Botao>
+    <Formulario>
+      <Campo />
+      <Botao>Pesquisar</Botao>
     </Formulario>
   )
 }
