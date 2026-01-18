@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 💅 Styled Components - Arquitetura CSS-in-JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status](https://img.shields.io/badge/Status-Finalizado-green)
+![React](https://img.shields.io/badge/Framework-React-61DAFB?logo=react&logoColor=black)
+![Styled Components](https://img.shields.io/badge/Style-Styled_Components-DB7093?logo=styled-components&logoColor=white)
+![JavaScript](https://img.shields.io/badge/Code-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-## Available Scripts
+> Uma abordagem moderna para estilização em React, onde o CSS é tratado como um cidadão de primeira classe, garantindo escopo, dinamicidade e manutenção simplificada.
 
-In the project directory, you can run:
+## 🎯 Motivação e Propósito
 
-### `npm start`
+Em aplicações React escaláveis, o uso de arquivos CSS tradicionais pode levar a problemas de "vazamento" de estilos (conflitos de nomes de classes globais) e dificuldade em manter a consistência visual.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O propósito deste projeto é implementar a biblioteca **Styled Components** para resolver esses problemas. O repositório demonstra como criar componentes que carregam seus próprios estilos, eliminando a necessidade de arquivos `.css` separados e permitindo que a aparência dos elementos mude dinamicamente baseada nas propriedades (`props`) passadas para eles.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🖼️ Demonstração Visual
 
-### `npm test`
+*(Se o projeto estiver hospedado na Vercel, Netlify ou GitHub Pages, insira o link aqui. Ex: [Ver Projeto Online](URL))*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run build`
+A stack tecnológica foca na integração perfeita entre lógica e estilo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **[ReactJS](https://react.dev/):** Biblioteca para construção da UI baseada em componentes.
+* **[Styled Components](https://styled-components.com/):** Biblioteca que permite escrever CSS real dentro do JavaScript (Template Literals).
+    * **`styled` API:** Para criação de elementos estilizados (`styled.div`, `styled.button`).
+    * **`createGlobalStyle`:** Para reset CSS e configurações de fonte globais.
+    * **Props Interpolation:** Para lógica condicional dentro do CSS.
+* **[Vite](https://vitejs.dev/):** Ferramenta de build para ambiente de desenvolvimento ágil.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto explora os seguintes recursos da biblioteca:
 
-### `npm run eject`
+1.  **Componentes Estilizados:** Criação de elementos semânticos (Botões, Containers, Títulos) com estilos acoplados.
+2.  **Estilização Dinâmica:** Alteração de cores e dimensões baseadas em props (ex: um `<Botao primary>` tem cor diferente de um botão comum).
+3.  **Estilos Globais:** Configuração de reset e tipografia base que se aplicam a toda a aplicação sem poluir os componentes individuais.
+4.  **Pseudo-elementos e Seletores:** Uso de `&:hover`, `&::before` diretamente na definição do componente.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📂 Estrutura de Arquivos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A organização reflete a filosofia de componentização, onde estilos e lógica coexistem:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+styled_components_css_in_js/
+├── src/
+│   ├── components/      # Componentes de UI (Botão, Input, Título)
+│   │   ├── Botao/       # Pasta do componente
+│   │   │   └── styles.js # Definição dos estilos do botão
+│   │   └── Title/       # Exemplo de componente de texto
+│   ├── containers/      # Componentes de Layout/Seções da página
+│   ├── styles/          # Configurações globais
+│   │   └── global.js    # createGlobalStyle (Reset CSS)
+│   ├── App.jsx          # Componente Raiz
+│   └── main.jsx         # Ponto de entrada
+├── public/              # Assets estáticos
+├── package.json         # Dependências (styled-components)
+└── README.md            # Documentação
