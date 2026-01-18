@@ -13,10 +13,6 @@ Em aplicações React escaláveis, o uso de arquivos CSS tradicionais pode levar
 
 O propósito deste projeto é implementar a biblioteca **Styled Components** para resolver esses problemas. O repositório demonstra como criar componentes que carregam seus próprios estilos, eliminando a necessidade de arquivos `.css` separados e permitindo que a aparência dos elementos mude dinamicamente baseada nas propriedades (`props`) passadas para eles.
 
-## 🖼️ Demonstração Visual
-
-*(Se o projeto estiver hospedado na Vercel, Netlify ou GitHub Pages, insira o link aqui. Ex: [Ver Projeto Online](URL))*
-
 ## 🛠️ Tecnologias Utilizadas
 
 A stack tecnológica foca na integração perfeita entre lógica e estilo:
